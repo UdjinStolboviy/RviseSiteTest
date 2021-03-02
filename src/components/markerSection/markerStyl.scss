@@ -1,0 +1,93 @@
+.block {
+  .marker__mod-content {
+    @media (max-width: 1200px) {
+    }
+  }
+
+  &__promo-img {
+    .marker-car {
+      width: 380px;
+      height: 281px;
+      z-index: 2;
+      background: #ffffff;
+      box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+      border-radius: 8px;
+      @media (max-width: 600px) {
+        width: 300px;
+        height: 326px;
+      }
+      p {
+        padding: 0 28px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
+
+        color: #63718e;
+      }
+
+      transform: translate(140px, -170px);
+
+      @media (max-width: 1200px) {
+        transform: translate(0px, -150px);
+      }
+      @media (max-width: 770px) {
+        transform: translate(300px, -210px);
+      }
+      @media (max-width: 600px) {
+        transform: translate(10px, -90px);
+      }
+      .car__title {
+        display: flex;
+        padding-top: 28px;
+        padding-left: 28px;
+        h3 {
+          font-family: Epilogue;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 18px;
+
+          color: #111563;
+        }
+      }
+      .car__title img {
+        padding-right: 10px;
+        width: 60px;
+        height: 60px;
+        z-index: 6;
+      }
+    }
+    .marker__img {
+      width: 725px;
+      height: 513px;
+      transform: translateX(-100px);
+      @media (max-width: 1200px) {
+        width: 500px;
+        height: 400px;
+      }
+      @media (max-width: 770px) {
+        display: flex;
+        width: 470.39px;
+        height: 416.77px;
+        transform: translateX(0px);
+      }
+      @media (max-width: 600px) {
+        width: 260.84px;
+        height: 252px;
+      }
+    }
+  }
+}
+.mod__marker-block {
+  @media (max-width: 770px) {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    align-content: center;
+  }
+}
+.colum__mod-marker {
+  width: 50%;
+}

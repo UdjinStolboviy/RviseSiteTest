@@ -1,0 +1,268 @@
+.btn {
+  &__anfr {
+    align-items: center;
+    padding: 6px 24px;
+
+    position: static;
+    width: 118px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background: #4cae50;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 150%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  @media (max-width: 850px) {
+    &__anfr {
+      display: none;
+    }
+  }
+  &__anmeld {
+    align-items: center;
+    padding: 5px 28px;
+
+    width: 125px;
+    height: 35px;
+
+    border: 2px solid #63718e;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    margin: 0px 20px;
+    background-color: #ffffff;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 150%;
+
+    color: #63718e;
+  }
+  @media (max-width: 1120px) {
+    &__anmeld {
+      display: none;
+    }
+  }
+}
+
+.header {
+  width: 100%;
+
+  &__logo {
+    width: 115px;
+    height: 45px;
+    margin-right: 230px;
+  }
+  &__menu {
+  }
+  &__row {
+    display: flex;
+
+    margin: 30px 0;
+  }
+  @media (max-width: 1320px) {
+    &__logo {
+      margin-right: 15px;
+    }
+    @media (max-width: 1100px) {
+      &__logo {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+.icon-menu {
+}
+
+.menu {
+  ul {
+    padding-inline-start: 0px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    ul {
+      padding-inline-start: 0px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+    color: #63718e;
+
+    margin: 0px 15px;
+  }
+  &__list {
+    display: flex;
+
+    li {
+      display: block;
+    }
+  }
+  &__phone-number {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+  }
+  &__phone-text {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  &__search-alt {
+    margin-right: 20px;
+    width: 24px;
+    height: 24px;
+  }
+}
+.menu {
+  &__icon {
+  }
+  &__body {
+  }
+  @media (max-width: 1120px) {
+    &__body {
+    }
+    &__phone-number {
+      display: none;
+    }
+    &__phone-tex {
+      display: none;
+    }
+    &__search-alt {
+      display: none;
+    }
+    &__logo {
+      margin-right: 0px;
+    }
+    &__list {
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    &__row {
+      position: relative;
+
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      align-items: center;
+    }
+    &__logo img {
+      position: relative;
+      z-index: 3;
+    }
+  }
+  .header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(248, 252, 252);
+    z-index: 2;
+  }
+  .menu {
+    &__icon {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      z-index: 3;
+    }
+    &__icon::before,
+    &__icon::after {
+      content: "";
+      background-color: #63718e;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease 0s;
+    }
+    &__icon::before {
+      top: 0;
+    }
+    &__icon::after {
+      bottom: 0;
+    }
+    &__icon span {
+      position: absolute;
+      background-color: #63718e;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 9px;
+      transition: all 0.3s ease 0s;
+    }
+
+    &__body {
+      position: fixed;
+      overflow: auto;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(248, 252, 252);
+      transition: all 0.3s ease 0s;
+    }
+    &__body.active {
+      top: 0;
+    }
+    &__icon.active::before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &__icon.active::after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+    &__icon.active span {
+      transform: scale(0);
+    }
+
+    &__list {
+      display: block;
+      padding: 70px 10px 20px 10px;
+    }
+    &__list li {
+      margin: 20px;
+    }
+    &__link {
+      color: black;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+  }
+}
