@@ -4,6 +4,11 @@ import Promo from "../promo/";
 import MarkerSection from "../markerSection";
 import Calculator from "../calculator";
 import Testimonials from "../testimonials";
+import Carousels from "../carousel";
+import SpecialistSection from "../specialistSection";
+import AdvantagesSection from "../advantagesSection";
+import TypicalSection from "../typicalSection";
+import FaqBlock from "../faq";
 
 function App() {
   return (
@@ -15,6 +20,11 @@ function App() {
           <MarkerSection />
           <Calculator />
           <Testimonials />
+          <Carousels />
+          <SpecialistSection />
+          <AdvantagesSection />
+          <TypicalSection />
+          <FaqBlock />
         </div>
       </main>
     </div>
