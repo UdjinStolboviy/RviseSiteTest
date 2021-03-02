@@ -9,6 +9,7 @@ import SpecialistSection from "../specialistSection";
 import AdvantagesSection from "../advantagesSection";
 import TypicalSection from "../typicalSection";
 import FaqBlock from "../faq";
+import Footer from "../footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <TypicalSection />
           <FaqBlock />
         </div>
+        <Footer />
       </main>
     </div>
   );

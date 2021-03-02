@@ -1,0 +1,18 @@
+footer {
+  text-align: center;
+  background-color: #1c1e1f;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.main-footer {
+  .img-main {
+    margin-top: 67px;
+  }
+}
